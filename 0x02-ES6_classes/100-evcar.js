@@ -6,8 +6,12 @@ export default class EVCar extends Car {
     this._range = range;
   }
 
-  static cloneCar() {
-    const clond = Object.create(Car.prototype);
+  cloneCar() {
+    const clond = new Car();
+    clond._brand = this._brand;
+    clond._motor = this._motor;
+    clond._color = this._color;
+
     clond._brand = undefined;
     clond._motor = undefined;
     clond._color = undefined;
