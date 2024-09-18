@@ -13,7 +13,7 @@ function countStudents(path) {
     const students = lns.slice(1).map((line) => line.split(','));
 
     console.log(hder);
-    console.log(`Number of sudents: ${students.length}`);
+    console.log(`Number of students: ${students.length}`);
 
     const f = {};
 
