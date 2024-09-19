@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "chai": "^5.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "mocha": "^10.7.3"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "eslint": "^9.10.0"
+  },
+  "type": "module"
+}
