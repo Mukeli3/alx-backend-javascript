@@ -9,6 +9,5 @@
   },
   "dependencies": {
     "eslint": "^9.10.0"
-  },
-  "type": "module"
+  }
 }
