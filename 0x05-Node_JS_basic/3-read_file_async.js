@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 
 function countStudents(path) {
   return new Promise((resolve, reject) => {
@@ -9,8 +8,8 @@ function countStudents(path) {
         return;
       }
       const lns = data.trim().split('\n');
-      const students = lns.slice(1).filter(line => line);
-      
+      const students = lns.slice(1).filter((line) => line);
+
       console.log(`Number of students: ${students.length}`);
 
       const fds = {};
@@ -20,8 +19,8 @@ function countStudents(path) {
 
         if (!fds[fd]) {
           fds[fd] = [];
-	}
-	fds[fd].push(fname);
+        }
+        fds[fd].push(fname);
       });
       Object.keys(fds).forEach((fd) => {
         console.log(`Number of students in ${fd}: ${fds[fd].length}. List: ${fds[fd].join(', ')}`);
