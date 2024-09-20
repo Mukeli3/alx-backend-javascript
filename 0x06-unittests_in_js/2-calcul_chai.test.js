@@ -1,8 +1,8 @@
-(async () => {
-  const { expect } = await import('chai');
-  const calculateNumber = (await import('./2-calcul_chai.js')).default;
+const { expect } = require('chai');
+const calculateNumber = require('./2-calcul_chai.js').default;
+
   describe('calculateNumber', () => {
-    describe('sUM', () => {
+    describe('SUM', () => {
     it('should return 7 when inputs are 4.7 and 2.3', () => {
       expect(calculateNumber('SUM', 4.7, 2.3)).to.equal(7);
     });
@@ -16,7 +16,7 @@
       expect(calculateNumber('SUM', 1, 3),).to.equal(4);
     });
   });
-  describe('sUBTRACT', () => {
+  describe('SUBTRACT', () => {
     it('should return 3 when inputs are 8 and 5', () => {
       expect(calculateNumber('SUBTRACT', 8, 5)).to.equal(3);
     });
@@ -33,7 +33,7 @@
       expect(calculateNumber('SUBTRACT', 5, -8)).to.equal(13);
     });
   });
-  describe('dIVIDE', () => {
+  describe('DIVIDE', () => {
     it('should return 3 when inputs are 6 and 2', () => {
       expect(calculateNumber('DIVIDE', 6, 2)).to.equal(3);
     });
@@ -54,4 +54,3 @@
     });
   });
 });
-})();
